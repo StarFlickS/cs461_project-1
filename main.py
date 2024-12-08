@@ -106,18 +106,18 @@ input_df = input_df[X.columns]
 # ตรวจสอบความไม่สมดุลของ Target
 from collections import Counter
 
-# ตรวจสอบความสมดุลของ target
-print("Distribution of target variable before SMOTE:")
-print(Counter(y))  # แสดงจำนวนตัวอย่างในแต่ละ class
+
+print("การแบ่งสัดส่วนของข้อมูลก่อนการ SMOTE:")
+print(Counter(y))  
 
 # แสดงเป็นเปอร์เซ็นต์
 total = len(y)
 class_distribution = {k: v / total * 100 for k, v in Counter(y).items()}
-print("Class distribution in percentages:", class_distribution)
+print("เป็น %", class_distribution)
 
-# ตรวจสอบข้อมูลที่ผ่าน SMOTE
-print("Distribution of target variable after SMOTE:")
-print(Counter(y_resampled))  # แสดงจำนวนตัวอย่างในแต่ละ class
+
+print("ารแบ่งสัดส่วนของข้อมูลหลังการ SMOTE:")
+print(Counter(y_resampled))  
 
 
 # ทำนายผล
